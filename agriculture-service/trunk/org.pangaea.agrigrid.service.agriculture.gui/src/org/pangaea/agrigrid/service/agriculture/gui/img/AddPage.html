@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="Keywords" content=" " />
+		<meta name="Description" content="" />
+		<title><wicket:message key="image.label.title">Image Service Administration</wicket:message></title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
+	</head>
+	<body>
+		<h1><wicket:message key="image.label.title.add">Add Image</wicket:message></h1>
+		<div wicket:id="feedback">feedback message</div>
+		
+		<form wicket:id="form">
+			<table class="form-add">
+				<tr>
+					<th><wicket:message key="image.label.image" >Image</wicket:message>*</th>
+					<td><input type="file" wicket:id="image"/></td>
+				</tr>
+
+				<tr>
+					<th><wicket:message key="label.copyright" >Copyright</wicket:message></th>
+					<td><textarea rows=4 wicket:id="copyright" ></textarea></td>
+				</tr>
+				<tr>
+					<th><wicket:message key="label.license" >License</wicket:message></th>
+					<td><textarea rows=4 wicket:id="license"></textarea></td>
+				</tr>
+				<tr>
+					<th><wicket:message key="label.category" >Category</wicket:message></th>
+					<td class="choice">
+						<div style="height: 480px; overflow: scroll;"><span wicket:id="category" /></div>
+					</td>
+				</tr>
+				<tr>
+					<th><wicket:message key="label.caption" >Captions</wicket:message></th>
+					<td>
+						<ul wicket:id="captionWrapper" class="form-list">
+							<li wicket:id="captionRepeater">
+								<select  wicket:id="captionLang">
+									<option value="en">English</option>
+									<option value="ja">Japanese</option>
+								</select><br/>
+								<textarea rows=4 wicket:id="caption"></textarea>
+								<div class="right">
+									<a href="#" wicket:id="deleteCaption">
+										<wicket:message key="label.delete.caption">delete caption</wicket:message>
+									</a>
+								</div>
+								<hr/>
+							</li>
+						</ul>
+						<div class="right">
+							<a href="#" wicket:id="addCaption">
+								<wicket:message key="label.add.caption" >add caption</wicket:message>
+							</a>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="center button">
+				<input type="button" wicket:id="cancel" wicket:message="value:label.button.cancel" value="Cancel"/>
+				<input type="submit" wicket:id="add" wicket:message="value:label.button.add" value="Add"/>
+			</div>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="importer"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/lib/hibernate/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="/lib/hibernate/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/lib/hibernate/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="/lib/hibernate/hibernate-annotations.jar" sourcepath="/sources/hibernate/hibernate-annotations-3.4.0.GA-src.zip"/>
+	<classpathentry kind="lib" path="/lib/hibernate/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="/lib/hibernate/hibernate3.3.2.patched.jar" sourcepath="/sources/hibernate/hibernate-3.3.2.ga.zip"/>
+	<classpathentry kind="lib" path="/lib/hibernate/javassist-3.9.0.GA.jar"/>
+	<classpathentry kind="lib" path="/lib/hibernate/jdbc2_0-stdext.jar"/>
+	<classpathentry kind="lib" path="/lib/hibernate/jta-1.1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jp.go.nict.langrid.commons"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jp.go.nict.langrid.language"/>
+	<classpathentry kind="lib" path="/lib/commons/commons-lang-2.4.jar" sourcepath="/sources/commons/commons-lang-2.4-sources.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/lib/opencsv/opencsv-2.2.jar"/>
+	<classpathentry kind="lib" path="/lib/slf4j/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="/lib/slf4j/slf4j-jdk14-1.5.8.jar"/>
+	<classpathentry kind="lib" path="/lib/postgre/postgresql-8.4-702.jdbc4.jar"/>
+	<classpathentry kind="lib" path="/lib/commons/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

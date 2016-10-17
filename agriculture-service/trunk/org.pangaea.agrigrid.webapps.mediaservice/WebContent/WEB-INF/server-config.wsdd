@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<globalConfiguration>
+		<parameter name="sendMultiRefs" value="true"/>
+		<parameter name="disablePrettyXML" value="true"/>
+		<parameter name="adminPassword" value="admin"/>
+		<parameter name="dotNetSoapEncFix" value="true"/>
+		<parameter name="enableNamespacePrefixOptimization" value="false"/>
+		<parameter name="sendXMLDeclaration" value="true"/>
+		<parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+		<parameter name="sendXsiTypes" value="true"/>
+		<requestFlow>
+			<handler type="java:org.apache.axis.handlers.JWSHandler">
+				<parameter name="scope" value="session"/>
+			</handler>
+			<handler type="java:org.apache.axis.handlers.JWSHandler">
+				<parameter name="scope" value="request"/>
+				<parameter name="extension" value=".jwr"/>
+			</handler>
+		</requestFlow>
+	</globalConfiguration>
+	<handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+	<handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+	<handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+
+	<service name="AgricultureImageService" provider="java:RPC">
+        <parameter name="allowedMethods" value="searchImages,getSupportedLanguages,getThumbnail,getCategoryNames,listAllCategories"/>
+		<parameter name="className" value="org.pangaea.agrigrid.service.agriculture.image.AgriCultureImageService"/>
+		<beanMapping qname="ns:InvalidParameterException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.InvalidParameterException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:LangridException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.LangridException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:ProcessFailedException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.ProcessFailedException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:Caption" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Caption" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:Category" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Category" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:Order" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Order" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:ImageEntry" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.image.ImageEntry" xmlns:ns="http://agrigrid.pangaea.org/ws/image/"/>
+	</service>
+	<service name="AgricultureVideoService" provider="java:RPC">
+		<parameter name="allowedMethods" value="searchVideos,listAllCategories,getCategoryNames,getThumbnail,getSubtitles,getSupportedLanguages"/>
+		<parameter name="className" value="org.pangaea.agrigrid.service.agriculture.video.AgriCultureVideoService"/>
+		<beanMapping qname="ns:InvalidParameterException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.InvalidParameterException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:LangridException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.LangridException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:ProcessFailedException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.ProcessFailedException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:Caption" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Caption" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:Category" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Category" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:Order" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Order" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:Subtitle" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.video.Subtitle" xmlns:ns="http://agrigrid.pangaea.org/ws/video/"/>
+		<beanMapping qname="ns:VideoEntry" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.video.VideoEntry" xmlns:ns="http://agrigrid.pangaea.org/ws/video/"/>
+	</service>
+	<service name="AgricultureQAService" provider="java:RPC">
+		<parameter name="allowedMethods" value="searchQAs,getQAs,listAllCategories,getCategoryNames,getSupportedLanguages"/>
+		<parameter name="className" value="org.pangaea.agrigrid.service.agriculture.qa.AgriCultureQAService"/>
+		<beanMapping qname="ns:InvalidParameterException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.InvalidParameterException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:LangridException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.LangridException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:ProcessFailedException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.ProcessFailedException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:Category" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Category" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:Order" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Order" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:QAEntry" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.qa.QAEntry" xmlns:ns="http://agrigrid.pangaea.org/ws/qa/"/>
+	</service>
+
+<!-- 
+
+	<service name="MockCompositionAssistanceService" provider="java:RPC">
+		<parameter name="allowedMethods" value="*"/>
+		<parameter name="className" value="org.pangaea.agrigrid.webapps.mock.MockCompositionAssistanceService"/>
+		<beanMapping qname="ns:InvalidParameterException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.InvalidParameterException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:ProcessFailedException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.ProcessFailedException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:Category" languageSpecificType="java:jp.go.nict.langrid.service_1_2.Category" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:BoundChoiceParameter" languageSpecificType="java:jp.go.nict.langrid.service_1_2.templateparalleltext.BoundChoiceParameter" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/templateparalleltext/"/>
+		<beanMapping qname="ns:BoundValueParameter" languageSpecificType="java:jp.go.nict.langrid.service_1_2.templateparalleltext.BoundValueParameter" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/templateparalleltext/"/>
+		<beanMapping qname="ns:Choice" languageSpecificType="java:jp.go.nict.langrid.service_1_2.templateparalleltext.Choice" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/templateparalleltext/"/>
+		<beanMapping qname="ns:ChoiceParameter" languageSpecificType="java:jp.go.nict.langrid.service_1_2.templateparalleltext.ChoiceParameter" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/templateparalleltext/"/>
+		<beanMapping qname="ns:ValueParameter" languageSpecificType="java:jp.go.nict.langrid.service_1_2.templateparalleltext.ValueParameter" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/templateparalleltext/"/>
+		<beanMapping qname="ns:Template" languageSpecificType="java:jp.go.nict.langrid.service_1_2.compositionassistance.Template" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/compositionassistance/"/>
+	</service>
+	<service name="MockTemplateParallelTextService" provider="java:RPC">
+		<parameter name="allowedMethods" value="*"/>
+		<parameter name="className" value="org.pangaea.agrigrid.webapps.mock.MockTemplateParallelTextService"/>
+		<beanMapping qname="ns:AccessLimitExceededException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.AccessLimitExceededException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:InvalidParameterException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.InvalidParameterException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:LangridException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.LangridException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:NoAccessPermissionException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.NoAccessPermissionException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:NoValidEndpointsException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.NoValidEndpointsException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:ProcessFailedException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.ProcessFailedException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:ServerBusyException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.ServerBusyException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:ServiceNotActiveException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.ServiceNotActiveException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:ServiceNotFoundException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.ServiceNotFoundException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:UnsupportedLanguageException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.UnsupportedLanguageException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:UnsupportedMatchingMethodException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.UnsupportedMatchingMethodException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:Category" languageSpecificType="java:jp.go.nict.langrid.service_1_2.Category" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:BoundChoiceParameter" languageSpecificType="java:jp.go.nict.langrid.service_1_2.templateparalleltext.BoundChoiceParameter" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/templateparalleltext/"/>
+		<beanMapping qname="ns:BoundValueParameter" languageSpecificType="java:jp.go.nict.langrid.service_1_2.templateparalleltext.BoundValueParameter" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/templateparalleltext/"/>
+		<beanMapping qname="ns:Choice" languageSpecificType="java:jp.go.nict.langrid.service_1_2.templateparalleltext.Choice" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/templateparalleltext/"/>
+		<beanMapping qname="ns:ChoiceParameter" languageSpecificType="java:jp.go.nict.langrid.service_1_2.templateparalleltext.ChoiceParameter" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/templateparalleltext/"/>
+		<beanMapping qname="ns:ValueParameter" languageSpecificType="java:jp.go.nict.langrid.service_1_2.templateparalleltext.ValueParameter" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/templateparalleltext/"/>
+		<beanMapping qname="ns:Template" languageSpecificType="java:jp.go.nict.langrid.service_1_2.templateparalleltext.Template" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/templateparalleltext/"/>
+	</service>
+	<service name="MockImageService" provider="java:RPC">
+		<parameter name="allowedMethods" value="*"/>
+		<parameter name="className" value="org.pangaea.agrigrid.webapps.mock.MockImageService"/>
+		<beanMapping qname="ns:InvalidParameterException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.InvalidParameterException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:LangridException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.LangridException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:ProcessFailedException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.ProcessFailedException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:Caption" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Caption" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:Category" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Category" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:Order" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Order" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:ImageEntry" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.image.ImageEntry" xmlns:ns="http://agrigrid.pangaea.org/ws/image/"/>
+	</service>
+	<service name="MockVideoService" provider="java:RPC">
+		<parameter name="allowedMethods" value="*"/>
+		<parameter name="className" value="org.pangaea.agrigrid.webapps.mock.MockVideoService"/>
+		<beanMapping qname="ns:InvalidParameterException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.InvalidParameterException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:LangridException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.LangridException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:ProcessFailedException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.ProcessFailedException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:Caption" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Caption" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:Category" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Category" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:Order" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Order" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:Subtitle" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.video.Subtitle" xmlns:ns="http://agrigrid.pangaea.org/ws/video/"/>
+		<beanMapping qname="ns:VideoEntry" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.video.VideoEntry" xmlns:ns="http://agrigrid.pangaea.org/ws/video/"/>
+	</service>
+	<service name="MockQAService" provider="java:RPC">
+		<parameter name="allowedMethods" value="*"/>
+		<parameter name="className" value="org.pangaea.agrigrid.webapps.mock.MockQAService"/>
+		<beanMapping qname="ns:InvalidParameterException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.InvalidParameterException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:LangridException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.LangridException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:ProcessFailedException" languageSpecificType="java:jp.go.nict.langrid.service_1_2.ProcessFailedException" xmlns:ns="http://langrid.nict.go.jp/ws_1_2/"/>
+		<beanMapping qname="ns:Category" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Category" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:Order" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.Order" xmlns:ns="http://agrigrid.pangaea.org/ws/"/>
+		<beanMapping qname="ns:QA" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.qa.QA" xmlns:ns="http://agrigrid.pangaea.org/ws/qa/"/>
+		<beanMapping qname="ns:QAEntry" languageSpecificType="java:org.pangaea.agrigrid.service.api.agriculture.qa.QAEntry" xmlns:ns="http://agrigrid.pangaea.org/ws/qa/"/>
+	</service>
+-->
+	<service name="AdminService" provider="java:MSG">
+		<parameter name="allowedMethods" value="AdminService"/>
+		<parameter name="enableRemoteAdmin" value="false"/>
+		<parameter name="className" value="org.apache.axis.utils.Admin"/>
+		<namespace>http://xml.apache.org/axis/wsdd/</namespace>
+	</service>
+	<service name="Version" provider="java:RPC">
+		<parameter name="allowedMethods" value="getVersion"/>
+		<parameter name="className" value="org.apache.axis.Version"/>
+	</service>
+	<transport name="http">
+		<requestFlow>
+			<handler type="URLMapper"/>
+			<handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+		</requestFlow>
+		<parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+		<parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+		<parameter name="qs.list" value="org.apache.axis.transport.http.QSListHandler"/>
+		<parameter name="qs.method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+		<parameter name="qs:method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+		<parameter name="qs.wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+	</transport>
+	<transport name="local">
+		<responseFlow>
+			<handler type="LocalResponder"/>
+		</responseFlow>
+	</transport>
+</deployment>

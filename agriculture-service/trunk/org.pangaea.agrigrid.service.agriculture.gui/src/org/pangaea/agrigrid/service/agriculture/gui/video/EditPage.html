@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="Keywords" content=" " />
+		<meta name="Description" content="" />
+		<title><wicket:message key="video.label.title">Video Service Administration</wicket:message></title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
+	</head>
+	<body>
+		<h1><wicket:message key="video.label.title.edit">Edit Video</wicket:message></h1>
+		<div wicket:id="feedback">feedback message</div>
+		
+		<form wicket:id="form">
+			<table class="form-add">
+				<tr>
+					<th><wicket:message key="video.label.video" >Video</wicket:message>*</th>
+					<td>
+						<div wicket:id="fileName">FileName.name</div>
+						<input type="file" wicket:id="video"/>
+					</td>
+				</tr>
+				<tr>
+					<th><wicket:message key="label.file.image.thumbnail" >Thumbnail</wicket:message></th>
+					<td>
+						<img width=100 src="no-image.jpg" wicket:id="thumbnailImage"/>
+						<br/>
+						<input type="file" wicket:id="thumbnail"/>
+					</td>
+				</tr>
+				<tr>
+					<th><wicket:message key="label.copyright" >Copyright</wicket:message></th>
+					<td><textarea rows=4 wicket:id="copyright" ></textarea></td>
+				</tr>
+				<tr>
+					<th><wicket:message key="label.license" >License</wicket:message></th>
+					<td><textarea rows=4 wicket:id="license"></textarea></td>
+				</tr>
+				<tr>
+					<th><wicket:message key="label.category" >Category</wicket:message></th>
+					<td class="choice">
+						<div style="height: 480px; overflow: scroll;" wicket:id="category">
+							<input type="checkbox" id="check1"/><label for="check1">check1</label>
+							<input type="checkbox" id="check2"/><label for="check2">check2</label>
+							<input type="checkbox" id="check3"/><label for="check3">check3</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th><wicket:message key="label.caption" >Captions</wicket:message></th>
+					<td>
+						<ul wicket:id="captionWrapper" class="form-list">
+							<li wicket:id="captionRepeater">
+								<select  wicket:id="captionLang">
+									<option value="en">English</option>
+									<option value="ja">Japanese</option>
+								</select><br/>
+								<textarea rows=4 wicket:id="caption"></textarea>
+								<div class="right">
+									<a href="#" wicket:id="deleteCaption">
+										<wicket:message key="label.delete.caption">delete caption</wicket:message>
+									</a>
+								</div>
+								<hr/>
+							</li>
+						</ul>
+						<div class="right">
+							<a href="#" wicket:id="addCaption">
+								<wicket:message key="label.add.caption" >add caption</wicket:message>
+							</a>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<th>
+						<wicket:message key="video.label.subtitle" >Subtitles</wicket:message>
+					</th>
+					<td>
+						<ul wicket:id="subtitleWrapper" class="form-list">
+							<li wicket:id="subtitleRepeater">
+								<select  wicket:id="subtitleLang">
+									<option value="en">English</option>
+									<option value="ja">Japanese</option>
+								</select>
+								<input type="file" wicket:id="subtitleFile" />
+								<div class="right">
+									<a href="#" wicket:id="deleteSubtitle">
+										<wicket:message key="video.label.delete.subtitle">delete caption</wicket:message>
+									</a>
+								</div>
+								<hr/>
+							</li>
+						</ul>
+						<div class="right">
+							<a href="#" wicket:id="addSubtitle">
+								<wicket:message key="video.label.add.subtitle" >add subtitle</wicket:message>
+							</a>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="center button">
+				<input type="button" wicket:id="cancel" wicket:message="value:label.button.cancel" value="Cancel"/>
+				<input type="submit" wicket:id="edit" wicket:message="value:label.button.Edit" value="Edit"/>
+			</div>
+		</form>
+	</body>
+</html>

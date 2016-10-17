@@ -1,0 +1,69 @@
+
+*{}
+img{border:none;}
+body{width:1024px;}
+table{border-collapse: collapse;border-spacing:0px;width:100%;}
+th{border:2px solid black;padding:5px;}
+td{border:2px solid black;padding:5px;}
+a{text-decoration: none;}
+
+.right {text-align:right;}
+.center {text-align:center;}
+
+.image-list th.thumbnail{width:5%;}
+.image-list th.file-name{width:15%;}
+.image-list th.categories{width:40%;}
+.image-list th.caption{width:25%;}
+.image-list th.update{width:10%;}
+.image-list th.control{width:5%;}
+.image-list tr td div{max-height:10em;overflow-y: auto;}
+
+.video-list th.thumbnail{width:5%;}
+.video-list th.file-name{width:15%;}
+.video-list th.categories{width:15%;}
+.video-list th.caption{width:20%;}
+.video-list th.subtitles{width:30%;}
+.video-list th.update{width:10%;}
+.video-list th.control{width:5%;}
+.video-list tr td div{max-height:15em;overflow-y: auto;}
+
+.adjacencypair-list th.turm{width:25%;}
+.adjacencypair-list th.related-turm{width:45%;}
+.adjacencypair-list ol{margin:0px;}
+.adjacencypair-list th.categories{width:15%;}
+.adjacencypair-list th.update{width:10%;}
+.adjacencypair-list th.control{width:5%;}
+.adjacencypair-list tr td div{max-height:10em;overflow-y: auto;padding:5px;}
+.adjacencypair-list tr td div ul{list-style: none;margin:0px;padding:0px;}
+
+.form-add {margin-bottom: 10px;}
+.form-add th {text-align:left;width:20%;}
+.form-add td input {width:80%;}
+.form-add td ul.form-list{list-style: none;margin:0px;margin-bottom:5px;padding:0px;}
+.form-add td ul.form-list li select{vertical-align:top;}
+.form-add textarea{width:80%;}
+.form-add td.choice input {width:auto;}
+.button input {width:100px;}
+.button-small input {width:80px;}
+.size-nomal {width:auto;}
+/*
+.jplayer{width:520px;height:330px;}
+*/
+.jplayer{width:100%;height:100%;}
+.jp-type-single{width: 640px; height:480px;margin: 0px 20px;}
+
+/*
+Q&A
+*/
+.tab-row ul{list-style: none;margin:0px;padding:0px;}
+.tab-row ul li{margin-top:10px;float:left;margin-right:5px;width:120px;border:1px solid black;border-bottom:none;}
+.tab-row ul li.selected{padding: 5px;margin-top:0px;}
+.tab-row ul li a span{display:block;font-weight:bold; block;text-align: center;}
+.tab-row ul li a:visited {color:blue;}
+.tab-panel {clear:both;}
+.tab-panel ul{border: 1px solid black;}
+.tab-panel ul li{padding: 5px;}
+.answer-list{list-style: none;padding:5px;margin:5px;}
+.answer-list-border{border:1px solid black;margin-bottom:25px;}
+
+

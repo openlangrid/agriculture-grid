@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="Keywords" content=" " />
+		<meta name="Description" content="" />
+		<title><wicket:message key="qa.label.title">Q&A Service Administration</wicket:message></title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
+	</head>
+	<body>
+		<h1><wicket:message key="qa.label.title.edit">Edit Q&A</wicket:message></h1>
+		<div wicket:id="feedback">feedback message</div>
+		
+		<form wicket:id="form">
+			<table class="form-add">
+				<tr>
+					<th><wicket:message key="qa.label.question" >Question</wicket:message></th>
+					<td><div wicket:id="questionForm"></div></td>
+				</tr>
+				<tr>
+					<th><wicket:message key="qa.label.answer" >Answer</wicket:message></th>
+					<td>
+						<ul wicket:id="secondTurnRewriteContainer" style="padding:0px;margin:0px;">
+							<li wicket:id="secondTurnGroupRepeater" class="answer-list">
+								<ul class="answer-list answer-list-border">
+									<li wicket:id="secondTurnRepeater">
+										<div wicket:id="secondTurn"></div>
+									</li>
+								</ul>
+								<hr/>
+							</li>
+						</ul>
+						<div class="right">
+							<a href="#" wicket:id="addAnswerGroupLink">
+								<wicket:message key="label.add.answer.group">add answer group</wicket:message>
+							</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th><wicket:message key="label.category" >Category</wicket:message></th>
+					<td class="choice">
+						<div style="height: 480px; overflow: scroll;"><span wicket:id="category" /></div>
+					</td>
+				</tr>
+			</table>
+			<div class="center button">
+				<input type="button" wicket:id="cancel" wicket:message="value:label.button.cancel" value="Cancel"/>
+				<input type="submit" wicket:id="edit" wicket:message="value:label.button.edit" value="Edit"/>
+			</div>
+		</form>
+	</body>
+</html>

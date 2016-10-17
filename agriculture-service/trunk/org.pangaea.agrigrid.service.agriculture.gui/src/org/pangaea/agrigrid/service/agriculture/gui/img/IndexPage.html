@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="Keywords" content=" " />
+		<meta name="Description" content="" />
+		<title><wicket:message key="image.label.title">Image Service Administration</wicket:message></title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
+	</head>
+	<body>
+		<h1><wicket:message key="image.label.title">Image Service Administration</wicket:message></h1>
+		<h3><a href="/" wicket:id="topLink"><wicket:message key="label.link.top">-> Top</wicket:message></a></h3>
+		<h3><a href="AddPage.html" wicket:id="addLink">
+			<wicket:message key="image.label.link.add">-> add image</wicket:message>
+		</a></h3>
+		<div wicket:id="feedback">feedback message</div>
+		<div>
+			<div class="right">
+				<select wicket:id="selecter"'></select>
+			</div>
+			<div wicket:id="listContainer">
+				<div class="right">
+					<div wicket:id="topNavigator"></div>
+				</div>
+				<table class="image-list">
+					<tr>
+						<th class="thumbnail"><wicket:message key="label.file.image.thumbnail">Thumbnail</wicket:message></th>
+						<th class="file-name"><wicket:message key="label.file.name">File Name</wicket:message></th>
+						<th class="categories">
+							<form wicket:id="formCat">
+							<wicket:message key="label.categories">Categories</wicket:message>
+							<select wicket:id="displayLangCat">
+								<option value="en">English</option>
+								<option value="ja">Japanese</option>
+							</select>
+							</form>
+						</th>
+						<th class="caption">
+							<form wicket:id="formCap">
+							<wicket:message key="label.caption">Caption</wicket:message>
+							<select wicket:id="displayLangCap">
+								<option value="en">English</option>
+								<option value="ja">Japanese</option>
+							</select>
+							</form>
+						</th>
+						<th class="update"><wicket:message key="label.date.update">Last Update Date</wicket:message></th>
+						<th class="control"><wicket:message key="label.control">Control</wicket:message></th>
+					</tr>
+					<tr wicket:id="list">
+						<td class="center"><img wicket:id="thumbnail" width=100 src="no-image.jpg"></img></td>
+						<td><a href="VideoPopupPage.html" wicket:id="fileLink"><span wicket:id="fileName">image.file</span></a></td>
+						<td><span wicket:id="categories">cat001</span></td>
+						<td><span wicket:id="caption">Caption</span></td>
+						<td><span wicket:id="updatedAt">1970/01/01 00:00:00</span></td>
+						<td>
+							<form wicket:id="form" class="button-small">
+								<input type="submit" wicket:id="edit" wicket:message="value:label.button.edit" value="Edit"/>
+								<input type="submit" wicket:id="delete" wicket:message="value:label.button.delete" value="Delete"/>
+							</form>
+						</td>
+					</tr>
+				</table>
+				<div class="right">
+					<div wicket:id="underNavigator"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

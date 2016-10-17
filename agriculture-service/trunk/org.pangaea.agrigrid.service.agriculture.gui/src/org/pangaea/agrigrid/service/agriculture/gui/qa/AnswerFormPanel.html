@@ -1,0 +1,18 @@
+<wicket:panel>
+<ul wicket:id="answerRewriteContainer" class="form-list">
+	<li wicket:id="answerRepeater">
+		<select  wicket:id="answerLang">
+			<option value="en">English</option>
+			<option value="ja">Japanese</option>
+		</select>
+		<br/>
+		<textarea rows=4 wicket:id="answer"></textarea>
+		<div class="right">
+			<a href="#" wicket:id="deleteAnswerLink">
+				<wicket:message key="label.delete.answer">delete answer</wicket:message>
+			</a>
+		</div>
+		<hr/>
+	</li>
+</ul>
+</wicket:panel>

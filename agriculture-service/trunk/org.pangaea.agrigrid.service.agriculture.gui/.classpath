@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/lib/apache/wicket-1.4.14.jar"/>
+	<classpathentry kind="lib" path="/lib/apache/wicket-extensions-1.4.14.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="/lib/slf4j/slf4j-jdk14-1.5.8.jar"/>
+	<classpathentry kind="lib" path="/lib/slf4j/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="/lib/langrid/langrid-language-1.2.jar"/>
+	<classpathentry kind="lib" path="/lib/langrid/langrid-commons-1.2.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.pangaea.agrigrid.service.agriculture.dao"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.pangaea.agrigrid.service.agriculture.image"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v6.0"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="org.pangaea.agrigrid.webapps.mock">
+        <wb-resource deploy-path="/" source-path="/WebContent"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="activation.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/axis/activation.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="antlr-2.7.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/hibernate/antlr-2.7.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="axis.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/axis/axis.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-beanutils.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/commons/commons-beanutils.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-codec-1.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/commons/commons-codec-1.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections-3.2.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/commons/commons-collections-3.2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-discovery-0.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/commons/commons-discovery-0.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang-2.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/commons/commons-lang-2.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-logging-1.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/commons/commons-logging-1.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dom4j-1.6.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/hibernate/dom4j-1.6.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ejb3-persistence.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/hibernate/ejb3-persistence.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate-annotations.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/hibernate/hibernate-annotations.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate-commons-annotations.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/hibernate/hibernate-commons-annotations.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate3.3.2.patched.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/hibernate/hibernate3.3.2.patched.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javassist-3.9.0.GA.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/hibernate/javassist-3.9.0.GA.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jaxrpc.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/ws/jaxrpc.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.commons.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.commons/jp.go.nict.langrid.commons">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.commons.ws.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.commons.ws/jp.go.nict.langrid.commons.ws">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.cosee.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.cosee/jp.go.nict.langrid.cosee">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.language.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.language/jp.go.nict.langrid.language">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.service.common_1_2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.service.common_1_2/jp.go.nict.langrid.service.common_1_2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.service.language_1_2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.service.language_1_2/jp.go.nict.langrid.service.language_1_2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.servicecontainer.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.servicecontainer/jp.go.nict.langrid.servicecontainer">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.wrapper.common.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.wrapper.common/jp.go.nict.langrid.wrapper.common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jta-1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/hibernate/jta-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mail.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/axis/mail.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.pangaea.agrigrid.service.api.agriculture.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/org.pangaea.agrigrid.service.api.agriculture/org.pangaea.agrigrid.service.api.agriculture">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.pangaea.agrigrid.service.agriculture.image.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/org.pangaea.agrigrid.service.agriculture.image/org.pangaea.agrigrid.service.agriculture.image">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="postgresql-8.1-409.jdbc3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/postgre/postgresql-8.1-409.jdbc3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="saaj.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/ws/saaj.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-api-1.5.8.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/slf4j/slf4j-api-1.5.8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-jdk14-1.5.8.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/slf4j/slf4j-jdk14-1.5.8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/spring/spring.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wsdl4j-1.5.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/ws/wsdl4j-1.5.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.commons.ws.axis.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.commons.ws.axis/jp.go.nict.langrid.commons.ws.axis">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.pangaea.agrigrid.service.agriculture.video.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/org.pangaea.agrigrid.service.agriculture.video/org.pangaea.agrigrid.service.agriculture.video">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wicket-1.4.14.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/apache/wicket-1.4.14.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wicket-extensions-1.4.14.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/apache/wicket-extensions-1.4.14.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.pangaea.agrigrid.service.agriculture.gui.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/org.pangaea.agrigrid.service.agriculture.gui/org.pangaea.agrigrid.service.agriculture.gui">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.pangaea.agrigrid.service.agriculture.dao.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/org.pangaea.agrigrid.service.agriculture.dao/org.pangaea.agrigrid.service.agriculture.dao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.commons.beanutils.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.commons.beanutils/jp.go.nict.langrid.commons.beanutils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.composite.async.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.composite.async/jp.go.nict.langrid.composite.async">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.composite.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.composite/jp.go.nict.langrid.composite">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="oscache-2.4.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/opensymphony/oscache-2.4.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsonic-1.2.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/jsonic/jsonic-1.2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.serviceexecutor.google.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.serviceexecutor.google/jp.go.nict.langrid.serviceexecutor.google">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.wrapper.jserver.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.wrapper.jserver/jp.go.nict.langrid.wrapper.jserver">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="langrid-client-ws_1_2-stubs-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/lib/langrid/langrid-client-ws_1_2-stubs-2.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.commons.cs.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.commons.cs/jp.go.nict.langrid.commons.cs">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jp.go.nict.langrid.client.axis.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jp.go.nict.langrid.client.axis/jp.go.nict.langrid.client.axis">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.pangaea.agrigrid.service.agriculture.qa.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/org.pangaea.agrigrid.service.agriculture.qa/org.pangaea.agrigrid.service.agriculture.qa">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="org.pangaea.agrigrid.webapps.mock"/>
+        <property name="java-output-path" value="/org.pangaea.agrigrid.webapps.mock/build/classes"/>
+    </wb-module>
+</project-modules>

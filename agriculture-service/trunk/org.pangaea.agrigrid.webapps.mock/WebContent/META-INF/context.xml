@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context reloadable="false" displayName="Agriculture Grid Services">
+	<Resource
+		name="jdbc/agrigrid-service" auth="Container" type="javax.sql.DataSource"
+		maxActive="100" maxIdle="50" maxWait="10000"
+		username="username" password="password"
+		driverClassName="org.postgresql.Driver"
+		url="jdbc:postgresql:agrigrid-service2"
+		/>
+	<Parameter name="supportedLanguages" value="ja en vi" />
+</Context>

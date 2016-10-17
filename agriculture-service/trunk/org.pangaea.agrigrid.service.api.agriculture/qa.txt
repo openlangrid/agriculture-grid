@@ -1,0 +1,13 @@
+Q&A
+
+Question
+qid pkey, jaquestion, enquestion, viquestion, createdAt, updatedAt
+
+Answer
+aid pkey, qid fkey, jaanswer, enanswer, vianswer
+
+Question_Category
+qid pkey, cid pkey
+
+Category
+cid pkey, ja, en, vi
